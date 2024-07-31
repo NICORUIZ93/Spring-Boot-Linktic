@@ -6,18 +6,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Data
 @Entity
 @Table(name = "asegurados")
 public class Asegurados {
-
     @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
-
     @Column(name = "tipo_identificacion", nullable = false)
     private Long tipoIdentificacion;
 
@@ -35,5 +30,4 @@ public class Asegurados {
 
     @Column(name = "fecha_nacimiento", nullable = false)
     private LocalDate fechaNacimiento;
-
 }

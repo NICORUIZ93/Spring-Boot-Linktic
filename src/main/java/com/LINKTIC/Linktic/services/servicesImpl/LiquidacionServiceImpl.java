@@ -34,6 +34,10 @@ public class LiquidacionServiceImpl implements LiquidacionService {
         this.amparoRepository = amparoRepository;
     }
 
+    public static int calcularEdad(LocalDate fechaNacimiento) {
+        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
+    }
+
     public void validarDatos(List<LiquidacionRequest> requests) {
         for (LiquidacionRequest request : requests) {
             if (request.getTipoIdentificacion() == null || request.getNumeroIdentificacion() == null || request.getValorAsegurado() == null) {
@@ -86,10 +90,6 @@ public class LiquidacionServiceImpl implements LiquidacionService {
         }
 
         return liquidaciones;
-    }
-
-    public static int calcularEdad(LocalDate fechaNacimiento) {
-        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
     }
 
 }

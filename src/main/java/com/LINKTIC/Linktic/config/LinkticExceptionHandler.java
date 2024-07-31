@@ -1,7 +1,7 @@
 package com.LINKTIC.Linktic.config;
 
-import com.LINKTIC.Linktic.models.DTO.ErrorDto;
 import com.LINKTIC.Linktic.config.ex.Linktic;
+import com.LINKTIC.Linktic.models.DTO.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -87,6 +87,12 @@ ejecuta el siguiente comando en la raíz del proyecto:
 docker-compose up --build
 ```
 
+Detener los Contenedores
+
+```bash
+docker-compose down
+```
+
 ## Acceder a la Aplicación
 
 Una vez los contenedores estén en ejecución, la aplicación estará disponible en:
