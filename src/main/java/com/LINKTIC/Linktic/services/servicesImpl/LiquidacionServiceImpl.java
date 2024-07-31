@@ -36,11 +36,9 @@ public class LiquidacionServiceImpl implements LiquidacionService {
 
     public void validarDatos(List<LiquidacionRequest> requests) {
         for (LiquidacionRequest request : requests) {
-            if (request.getTipoIdentificacion() == null || request.getNumeroIdentificacion() == null ||
-                    request.getValorAsegurado() == null || request.getValorAsegurado() <= 0) {
+            if (request.getTipoIdentificacion() == null || request.getNumeroIdentificacion() == null || request.getValorAsegurado() == null) {
                 throw new Linktic(ErrorMessages.MISSING_DATA);
-            }
-            if (request.getValorAsegurado() <= 0) {
+            } else if (request.getValorAsegurado() <= 0) {
                 throw new Linktic(ErrorMessages.INVALID_INSURANCE_AMOUNT);
             }
         }
