@@ -9,7 +9,7 @@ Para comenzar, clona el repositorio del proyecto utilizando el siguiente comando
 
 ```bash
 git clone https://github.com/NICORUIZ93/Spring-Boot-Linktic.git
-cd prueba-tecnica-linktic
+cd Spring-Boot-Linktic
 ```
 
 ## Configuración de la Base de Datos 🗄️
